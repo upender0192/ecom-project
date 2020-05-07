@@ -7,36 +7,41 @@ class MenuDIrectory extends React.Component{
         super();
 
         this.state = {
-            sections : [
+             sections : [
                 {
-                    title: 'title 1',
-                    imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQnuM0sGNqZJ38TvG6iJR30ow4AAnIhAXP58sy8DUtBn1UWzB8H&usqp=CAU',
-                    id : '1'
+                  title: 'hats',
+                  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  id: 1,
+                  linkUrl: 'hats'
                 },
                 {
-                    title: 'title 2',
-                    imageUrl : 'https://images-na.ssl-images-amazon.com/images/I/61YBr1gsDpL._UL1304_.jpg',
-                    id : '2'
+                  title: 'jackets',
+                  imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  id: 2,
+                  linkUrl: ''
                 },
                 {
-                    title: 'title 3',
-                    imageUrl : 'https://imgs7.luluandsky.com/fit-in/707x1000/c46a684c-ab42-4e06-b225-5637924b47b3/catalog/product/8/9/8904288494662_1.jpg',
-                    id : '3'
+                  title: 'sneakers',
+                  imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  id: 3,
+                  linkUrl: ''
                 },
                 {
-                    title: 'title 4',
-                    imageUrl : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQnuM0sGNqZJ38TvG6iJR30ow4AAnIhAXP58sy8DUtBn1UWzB8H&usqp=CAU',
-                    id : '4',
-                    size : 'large'
+                  title: 'womens',
+                  imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+                  size: 'large',
+                  id: 4,
+                  linkUrl: ''
                 },
                 {
-                    title: 'title 5',
-                    imageUrl : 'https://images-na.ssl-images-amazon.com/images/I/61YBr1gsDpL._UL1304_.jpg',
-                    id : '5',
-                    size : 'large'
-                    
+                  title: 'mens',
+                  imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                  size: 'large',
+                  id: 5,
+                  linkUrl: ''
                 }
-            ]
+              ]
+              
         }
     }
 
@@ -45,8 +50,8 @@ class MenuDIrectory extends React.Component{
         return(
             <div className="menu_main_wrapper">
                 {
-                    this.state.sections.map(({id , imageUrl,title , size}) => (
-                        <MenuItem key={id} title={title} imageurl={imageUrl} size={size} />
+                    this.state.sections.map(({id , imageUrl,title , size,linkUrl}) => (
+                        <MenuItem key={id} title={title} imageurl={imageUrl} size={size} linkUrl={linkUrl} />
                     ))
                 }
             </div>

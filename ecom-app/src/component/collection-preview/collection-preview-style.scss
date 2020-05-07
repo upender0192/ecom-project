@@ -1,0 +1,15 @@
+.items_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0px -15px;
+    > div{
+        flex: 0 0 25%;
+        padding:0px 15px;
+        margin-bottom:20px;
+        .items_cont
+        {
+            min-height:300px;
+        }
+        .items_footer{display:flex;justify-content:space-between;padding:15px 15px}
+    }
+}
